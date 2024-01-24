@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HACKATHON</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="signUpForm.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+
+    <style>
+      body nav {
+        font-family: "Lato", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div>
+        <a href="index.html" title="Go to Home page">
+          <h2>
+            <span style="font-weight: 900; color: rgb(75, 204, 0)">HACK-</span
+            >A-THON
+          </h2>
+        </a>
+        <div class="">
+          <div>
+            <a
+              href="#"
+              style="
+                cursor: pointer;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 25px;
+                font-weight: 600;
+              "
+            >
+              Login Credentials
+            </a>
+          </div>
+
+          <!-- <div class="button" title="Submit">
+            <a href="/Lab-2/lab2.html">Submit</a>
+          </div> -->
+        </div>
+      </div>
+    </nav>
+    <main>
+      <form method="get">
+        <div class="part-form">
+          <div class="input-title">
+            <h3>SIGN UP</h3>
+          </div>
+          <div class="input-container">
+            <div
+              class="input-section"
+              onmouseover="highlight(this)"
+              onmouseout="unhighlight(this)"
+            >
+              <label for="regno">USERNAME</label>
+              <input
+                autofocus
+                required
+                id="username"
+                name="username"
+                type="text"
+                pattern="^[1-9]{1}[0-9]{1}[A-Za-z]{3}([0-9999]{4})$"
+                placeholder="Enter a username"
+              />
+            </div>
+            <div
+              class="input-section"
+              onmouseover="highlight(this)"
+              onmouseout="unhighlight(this)"
+            >
+              <label for="password">PASSWORD</label>
+              <input
+                required
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Enter password"
+                onkeyup="showlen(this)"
+              />
+              <div id="passlentext" style="display: none;">
+                Password Length:<span id="passlen">0</span>
+              </div>
+            </div>
+            <div
+              class="input-section"
+              onmouseover="highlight(this)"
+              onmouseout="unhighlight(this)"
+            >
+              <label for="confp">CONFIRM PASSWORD</label>
+              <input
+                required
+                onchange="confirm()"
+                id="confp"
+                type="password"
+                placeholder="Confirm password"
+              />
+              <div id="passconf" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <div class="form-buttons">
+          <a href="taEntry.html" class="form-button" id="next">
+            <input
+              class="form-button-submit"
+              type="submit"
+              value="Next"
+              onclick="window.location.href = './dataEntry.html';"
+            />
+            <img
+              src="assets/circle-arrow-right-solid.svg"
+              style="filter: invert(100%); width: 15px"
+            />
+          </a>
+          <input class="form-button" id="reset" type="reset" />
+        </div>
+      </form>
+
+      <div id="gradient"></div>
+    </main>
+  </body>
+  <script src="js/functions.js"></script>
+</html>
+
+<!-- 
+  https://www.javascripttutorial.net/javascript-dom/javascript-form/
+  ..add JS for others in skills
+  ..add JS for changing color of border of fields when not filled and clicked on submit
+  ..add arrow at right bottom corner to go up when we scroll down
+ -->
